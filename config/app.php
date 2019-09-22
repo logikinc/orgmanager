@@ -10,9 +10,22 @@ return [
     | This value is the name of your application. This value is used when the
     | framework needs to place the application's name in a notification or
     | any other location as required by the application or its packages.
+    |
     */
 
     'name' => 'OrgManager',
+
+    /*
+    |--------------------------------------------------------------------------
+    | OrgManager Settings
+    |--------------------------------------------------------------------------
+    |
+    | Custom settings for OrgManager
+    */
+
+    'orgmanager' => [
+      'version' => 'v4.0 alpha',
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -21,7 +34,7 @@ return [
     |
     | This value determines the "environment" your application is currently
     | running in. This may determine how you prefer to configure various
-    | services your application utilizes. Set this in your ".env" file.
+    | services the application utilizes. Set this in your ".env" file.
     |
     */
 
@@ -52,6 +65,7 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
+    'asset_url' => env('ASSET_URL', null),
 
     /*
     |--------------------------------------------------------------------------
@@ -91,6 +105,18 @@ return [
     */
 
     'fallback_locale' => 'en',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Faker Locale
+    |--------------------------------------------------------------------------
+    |
+    | This locale will be used by the Faker PHP library when generating fake
+    | data for your database seeds. For example, this will be used to get
+    | localized telephone numbers, street address information and more.
+    |
+    */
+    'faker_locale' => 'en_US',
 
     /*
     |--------------------------------------------------------------------------
@@ -162,14 +188,13 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Laravel\Tinker\TinkerServiceProvider::class,
 
         /*
          * Package Service Providers...
          */
-
-        AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider::class,
-        GrahamCampbell\GitHub\GitHubServiceProvider::class,
-        Kamaln7\Toastr\ToastrServiceProvider::class,
+        OrgManager\Logos\OrgManagerLogosServiceProvider::class,
+        // OrgManager\OrgmanagerCustom\OrgmanagerCustomServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -199,6 +224,7 @@ return [
         'Artisan'      => Illuminate\Support\Facades\Artisan::class,
         'Auth'         => Illuminate\Support\Facades\Auth::class,
         'Blade'        => Illuminate\Support\Facades\Blade::class,
+        'Broadcast' => Illuminate\Support\Facades\Broadcast::class,
         'Bus'          => Illuminate\Support\Facades\Bus::class,
         'Cache'        => Illuminate\Support\Facades\Cache::class,
         'Config'       => Illuminate\Support\Facades\Config::class,
@@ -227,11 +253,8 @@ return [
         'URL'          => Illuminate\Support\Facades\URL::class,
         'Validator'    => Illuminate\Support\Facades\Validator::class,
         'View'         => Illuminate\Support\Facades\View::class,
-        'SocialAuth'   => AdamWathan\EloquentOAuth\Facades\OAuth::class,
-        'GitHub'       => GrahamCampbell\GitHub\Facades\GitHub::class,
-        'Toastr'       => Kamaln7\Toastr\Facades\Toastr::class,
+        'Github'       => GrahamCampbell\GitHub\Facades\GitHub::class,
         'Input'        => Illuminate\Support\Facades\Input::class,
-
     ],
 
 ];

@@ -1,57 +1,83 @@
-# OrgManager
-OrgManager allows Github Organizations to share link invites.
+<p align="center"><img alt="OrgManager" src="https://raw.githubusercontent.com/orgmanager/branding/master/PNG/orgmanager_Horizontal.png"></p>
 
-## You can access the hosted version at https://orgmanager.miguelpiedrafita.com.
+[![Build Status](https://travis-ci.org/orgmanager/orgmanager.svg?branch=master)](https://travis-ci.org/orgmanager/orgmanager)
+[![Code Coverage](https://scrutinizer-ci.com/g/orgmanager/orgmanager/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/orgmanager/orgmanager/?branch=master)
+[![CodeCov](https://codecov.io/gh/orgmanager/orgmanager/branch/master/graph/badge.svg)](https://codecov.io/gh/orgmanager/orgmanager)
+[![GitHub release](https://api.releasepage.co/v1/pages/0af37d75-ff86-4381-8f0d-5590fa8027a1/badge.svg?apiKey=live.QzuQeWHAAvXWoO5h)](http://releases.orgmanager.miguelpiedrafita.com)
+[![license](https://img.shields.io/github/license/orgmanager/orgmanager.svg)](LICENSE.md)
+[![Codacy grade](https://img.shields.io/codacy/grade/e27821fb6289410b8f58338c7e0bc686.svg)](https://www.codacy.com/app/m1guelpiedrafita/orgmanager/dashboard)
+[![Packagist](https://img.shields.io/packagist/v/orgmanager/orgmanager.svg)](https://packagist.org/packages/orgmanager/orgmanager)
+[![OpenCollective](https://opencollective.com/orgmanager/backers/badge.svg)](#backers) 
+[![OpenCollective](https://opencollective.com/orgmanager/sponsors/badge.svg)](#sponsors)
 
-## Introduction:
+> Invite System for GitHub Organizations
 
-OrgManager was created as a personal project for learning Laravel, PHP and the Github API. This means, I am still learning Laravel, so they're probably lot's of things to improve. If you find one, please [open an issue](https://github.com/m1guelpf/orgmanager/issues/new) or better, [make a pull request](https://github.com/m1guelpf/orgmanager/pulls/compare).
+OrgManager takes Github Organization invites to a new level! [Read more on the OrgManager documentation](https://orgmanager.readme.io/docs/about-orgmanager).
 
-## Features:
+## Table of Contents
 
-- Multi-user support: You can add all the organizations/users you want securely. In fact, anyone with a Github organization can use it if you expose it on the internet!
-- Uses Github Style: OrgManager uses [PrimeCSS](http://primercss.io/) and [Octicons](https://octicons.github.com) for having a github-like style!
-- Caching: OrgManager uses notification caching to reduce load time and provide you an awesome experience!
-- More coming soon: OrgManager is under active developement so, if you want to help or have ideas, go ahead and Contribute!
+- [Install](#install)
+- [Updating](#updating)
+- [Testing](#testing)
+- [Built With](#built-with)
+- [Support Channels](#support-channels)
+- [Contributing](#contributing)
+	- [Support OrgManager](#support-orgmanager)
+	- [People](#people)
+- [License](#license)
 
-## Requirements:
+## Install
 
-- PHP >= 5.6.4
-- Composer
-- MySQL
-- MySQL PHP Extension
-- OpenSSL PHP Extension
-- PDO PHP Extension
-- Mbstring PHP Extension
-- Tokenizer PHP Extension
-- XML PHP Extension
+To install the OrgManager **Stable Version**, [check out these docs](https://orgmanager.unmarkdocs.co/stable-version/requirements).
 
-## Installation:
+To learn how to setup the OrgManager **Developer Version** up and running on your local machine for development and testing purposes see the [OrgManager Developer Version](https://orgmanager.unmarkdocs.co/development-version/requirements) section in the OrgManager Documentation.
 
-1. Clone or download this repo to somewhere on your server.
-2. Rename .env.example to .env and fill the database settings.
-3. Run ```composer update```, ```php artisan key:generate``` and ```php artisan migrate```.
-4. [Create a Github OAuth app](https://github.com/settings/applications/new) using ```[YOUR_URL]/callback``` as the **Authorization callback URL** and add them to ```config/eloquent-oauth.php```. As this is complex, you can use the hosted version.
-5. Enjoy!
+## Updating
 
-## Status:
+OrgManager is under active development, and that means it gets lots of updates, bug fixes and new features. Read the guides below to learn how to update to the latest OrgManager version.
 
-Actual version: [```v1.0```](https://github.com/m1guelpf/orgmanager/releases/v1.0)
-Remember that you can always download the latest version using [this link](https://github.com/m1guelpf/orgmanager/releases/latest).
+For updating a development environment, read the [Updating the OrgManager Developer Version](https://orgmanager.unmarkdocs.co/development-version/updating) section in the OrgManager Documentation. For updating a production environment, read the [Updating the OrgManager Stable Version](https://orgmanager.unmarkdocs.co/stable-version/updating) section in the OrgManager Documentation.
 
-## TO DO:
+For the versions available, see the [releases page](https://github.com/orgmanager/orgmanager/releases).
 
-You can check the [```v2.0``` milestone](https://github.com/m1guelpf/orgmanager/milestone/1) to get info about the status of the ```v2.0``` development.
+## Testing
 
-Found an issue? Something to improve? [Open an issue](https://github.com/m1guelpf/orgmanager/issues/new)!
+We use the Laravel testing functionalities and PHPUnit to add automated testing to OrgManager.
 
-## Credits:
+You can read about [how to configure the testing environment and how to run the tests](https://orgmanager.unmarkdocs.co/development-version/testing) in the OrgManager Documentation.
 
-- [PHP](https://php.net) - For his awesome work on developing PHP.
-- [MySQL](https://mysql.com) - For that awesome DB software.
-- [Laravel](https://laravel.com) - For this awesome framework.
-- [Github](https://github.com) - For his [API](https://developers.github.com/v3) and the awesome people at [Github Support](https://github.com/contact).
-- [Adam Wathan](https://github.com/adamwathan) - For his [eloquent OAuth library](https://github.com/adamwathan/eloquent-oauth-l5).
-- [KNP Labs](https://knplabs.com) - For his awesome [php-github-api](https://github.com/KnpLabs/php-github-api).
-- [Graham Campbell](https://gjcampbell.co.uk/) - For his awesome [Laravel Github](https://github.com/GrahamCampbell/Laravel-GitHub).
-- [Google](https://hithub.com/google) - For the [php ReCaptcha library](https://github.com/google/recaptcha).
+
+## Built With
+
+* [PHP](https://php.net) - The programming language used.
+* [MySQL](https://mysql.com) - Database software used.
+* [Laravel](https://laravel.com) - The web framework used.
+* [Composer](https://getcomposer.org) - The Dependency Management software used.
+* [Github](https://github.com) - Thank you for your awesome API, and to the awesome people at [Github Support](https://github.com/contact)!
+* [Socialite](https://github.com/laravel/socialite) - The OAuth library used.
+* [PHP Github API](https://github.com/KnpLabs/php-github-api) & [Laravel Version](https://github.com/GrahamCampbell/Laravel-GitHub) - The API clients used
+* [PHP reCaptcha](https://github.com/google/recaptcha) - The reCaptcha Client
+* [Tailwind CSS](https://tailwindcss.com/) - The frontend framework used
+* [Octicons](https://octicons.github.com/) - The icons used
+
+## Support Channels
+
+Facing an issue? Want to meet other OrgManager users? Just want to say hello?
+
+Read the [OrgManager Support Channels](https://orgmanager.unmarkdocs.co/support) section in the OrgManager Documentation.
+
+## Contributing
+
+Please read the [Contributing to OrgManager](https://orgmanager.unmarkdocs.co/contributing) section on the OrgManager Documentation for ideas on how to help, and the [CONTRIBUTING.md](https://github.com/orgmanager/orgmanager/blob/master/.github/CONTRIBUTING.md) file for details on our code of conduct, and the process for submitting pull requests.
+
+### Support OrgManager
+
+Whether you are an individual or an organization, you can pledge as low as $1/month to support the development of OrgManager & other non-profit and open-source projects. **[Support me on Patreon](https://www.patreon.com/m1guelpiedrafita)**.
+
+### People
+
+For information about all the people that have helped to make this possible, check the [People](https://orgmanager.unmarkdocs.co/thanks) section in the OrgManager Documentation.
+
+## License
+
+Licensed under the Mozilla Public License (MPL). For more information, checkout the [LICENSE](LICENSE.md).
